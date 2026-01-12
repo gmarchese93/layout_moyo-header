@@ -9,7 +9,6 @@ body {
 header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   font-family: Roboto, sans-serif;
   font-weight: 500;
 }
@@ -22,7 +21,7 @@ nav ul {
 }
 
 nav li + li {
-  margin-left: 32px;
+  margin-left: 40px;
 }
 
 nav a {
@@ -33,6 +32,7 @@ nav a {
   text-align: center;
   text-decoration: none;
   color: #000;
+  box-sizing: border-box;
 }
 
 .is-active {
