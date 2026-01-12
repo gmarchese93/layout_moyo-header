@@ -11,7 +11,7 @@ header {
   width: 100%;
 }
 
-/* Centered content container */
+/* Centered container */
 .header__content {
   display: flex;
   align-items: center;
@@ -22,6 +22,7 @@ header {
 
   font-family: Roboto, sans-serif;
   font-weight: 500;
+  font-size: 14px; /* 🔴 CRUCIALE */
 }
 
 /* Logo */
@@ -30,7 +31,7 @@ header img {
   height: 32px;
 }
 
-/* Nav pushed to the right */
+/* Nav to the right */
 nav {
   margin-left: auto;
 }
@@ -44,7 +45,7 @@ nav ul {
 }
 
 nav li + li {
-  margin-left: 40px;
+  margin-left: 24px; /* 🔴 reference spacing */
 }
 
 /* Links */
@@ -54,10 +55,11 @@ nav a {
   line-height: 64px;
 
   text-transform: uppercase;
+  letter-spacing: 0.04em; /* 🔴 CRUCIALE */
   text-align: center;
   text-decoration: none;
 
-  color: #000;
+  color: #111;
   box-sizing: border-box;
 }
 
