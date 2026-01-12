@@ -6,37 +6,31 @@ body {
   --blue: #1278ff;
 }
 
-/* Header wrapper */
+/* HEADER */
 header {
-  width: 100%;
-}
-
-/* Centered container */
-.header__content {
   display: flex;
   align-items: center;
 
-  max-width: 1024px;
-  margin: 0 auto;
+  height: 64px;
+
   padding: 0 24px;
 
   font-family: Roboto, sans-serif;
   font-weight: 500;
-  font-size: 14px; /* 🔴 CRUCIALE */
+  font-size: 14px;
 }
 
-/* Logo */
+/* LOGO */
 header img {
   display: block;
   height: 32px;
 }
 
-/* Nav to the right */
+/* NAV */
 nav {
   margin-left: auto;
 }
 
-/* Nav list */
 nav ul {
   display: flex;
   list-style: none;
@@ -45,25 +39,23 @@ nav ul {
 }
 
 nav li + li {
-  margin-left: 24px; /* 🔴 reference spacing */
+  margin-left: 24px;
 }
 
-/* Links */
+/* LINKS */
 nav a {
   display: block;
   height: 64px;
   line-height: 64px;
 
   text-transform: uppercase;
-  letter-spacing: 0.04em; /* 🔴 CRUCIALE */
-  text-align: center;
-  text-decoration: none;
+  letter-spacing: 0.04em;
 
+  text-decoration: none;
   color: #111;
-  box-sizing: border-box;
 }
 
-/* Active underline */
+/* ACTIVE UNDERLINE */
 .is-active {
   position: relative;
 }
@@ -73,13 +65,13 @@ nav a {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 6px;
+  bottom: 0;
 
   height: 3px;
   background-color: var(--blue);
 }
 
-/* Hover */
+/* HOVER */
 nav a:hover {
   color: var(--blue);
 }
