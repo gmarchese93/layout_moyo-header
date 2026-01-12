@@ -6,13 +6,36 @@ body {
   --blue: #1278ff;
 }
 
+/* Header wrapper */
 header {
+  width: 100%;
+}
+
+/* Centered content container */
+.header__content {
   display: flex;
   align-items: center;
+
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 24px;
+
   font-family: Roboto, sans-serif;
   font-weight: 500;
 }
 
+/* Logo */
+header img {
+  display: block;
+  height: 32px;
+}
+
+/* Nav pushed to the right */
+nav {
+  margin-left: auto;
+}
+
+/* Nav list */
 nav ul {
   display: flex;
   list-style: none;
@@ -24,17 +47,21 @@ nav li + li {
   margin-left: 40px;
 }
 
+/* Links */
 nav a {
   display: block;
   height: 64px;
   line-height: 64px;
+
   text-transform: uppercase;
   text-align: center;
   text-decoration: none;
+
   color: #000;
   box-sizing: border-box;
 }
 
+/* Active underline */
 .is-active {
   position: relative;
 }
@@ -45,11 +72,12 @@ nav a {
   left: 0;
   right: 0;
   bottom: 6px;
+
   height: 3px;
   background-color: var(--blue);
 }
 
+/* Hover */
 nav a:hover {
   color: var(--blue);
 }
-
