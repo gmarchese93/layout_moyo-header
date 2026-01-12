@@ -10,7 +10,6 @@ body {
 header {
   display: flex;
   align-items: center;
-  padding: 0 24px;
 
   font-family: Roboto, sans-serif;
   font-weight: 500;
@@ -62,9 +61,9 @@ nav a {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: -6px;
+  bottom: 0;
 
-  width: 24px;        /* match Figma */
+  width: 24px;
   height: 3px;
   background-color: var(--blue);
 }
