@@ -1,92 +1,91 @@
+html {
+  font-family: Roboto, Arial, sans-serif;
+}
+
 body {
   margin: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+
+  --header-color: #fff;
+  --text-color: #000;
+  --selected-color: #00acdc;
+  --header-font-size: 12px;
+  --header-height: 60px;
 }
 
-:root {
-  --blue: #1278ff;
-}
-
-/* Header */
 .header {
+  margin: 0;
+  background-color: var(--header-color);
   display: flex;
   align-items: center;
-
-  height: 64px;
-  padding-inline: 50px;
-  background-color: #fff;
-  border-bottom: 1px solid #eaeaea;
-
-  font-family: Roboto, sans-serif;
-  font-weight: 500;
-  font-size: 14px;
+  justify-content: space-between;
 }
 
-/* Logo */
-.header__logo img {
+.logo {
   display: block;
-  height: 32px;
+  height: 40px;
+  width: 40px;
+  margin-left: 50px;
 }
 
-/* Nav */
+.image {
+  display: block;
+  object-fit: cover;
+  max-width: 100%;
+  height: 40px;
+  width: 40px;
+}
+
 .nav {
-  margin-left: auto;
+  display: inline-block;
+  margin-right: 50px;
 }
 
 .nav__list {
+  margin: 0 auto;
   display: flex;
-  list-style: none;
-  margin: 0;
   padding: 0;
+  list-style: none;
 }
 
-.nav__item + .nav__item {
-  margin-left: 24px;
+.nav__item:not(:first-child) {
+  margin-left: 20px;
 }
 
-/* Links */
 .nav__link {
+  display: block;
   position: relative;
-  display: flex;
-  align-items: center;
+  height: var(--header-height);
+  line-height: var(--header-height);
 
-  height: 64px;
-  box-sizing: border-box;
-
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-
+  color: var(--text-color);
   text-decoration: none;
-  color: #111;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-size: var(--header-font-size);
 }
 
-/* Hover */
 .nav__link:hover {
-  color: var(--blue);
+  color: var(--selected-color);
 }
 
-.nav__link:hover::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-
-  width: 100%;
-  height: 3px;
-  background-color: var(--blue);
+.nav__link:active {
+  color: var(--selected-color);
 }
 
-/* Active */
 .is-active {
-  color: var(--blue);
+  color: var(--selected-color);
 }
 
-.is-active::after {
-  content: "";
+.nav__link.is-active::after {
+  content: '';
   position: absolute;
   left: 0;
   bottom: 0;
 
+  height: 4px;
   width: 100%;
-  height: 3px;
-  background-color: var(--blue);
+  background-color: var(--selected-color);
+  border-radius: 8px;
 }
