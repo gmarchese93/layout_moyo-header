@@ -13,6 +13,7 @@ body {
 
   height: 60px;
   padding-inline: 50px;
+  background-color: #fff;
 
   font-family: Roboto, sans-serif;
   font-weight: 500;
@@ -43,9 +44,11 @@ body {
 
 /* Links */
 .nav__link {
-  display: block;
+  display: flex;
+  align-items: center;
+
   height: 60px;
-  line-height: 60px;
+  box-sizing: border-box;
 
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -59,7 +62,7 @@ body {
   color: var(--blue);
 }
 
-/* Active underline */
+/* Active */
 .is-active {
   position: relative;
   color: var(--blue);
